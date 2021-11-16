@@ -1,0 +1,109 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.planes {
+    background-color: v.$secundario;
+
+    h2 {
+        color: v.$blanco;
+        font-weight: 700;
+        font-size: 3.6rem;
+        display: inline-block;
+        margin: 5rem 0 3rem 0;
+
+        &::after {
+            content: "";
+            height: 1rem;
+            background-color: v.$primario;
+            display: block;
+            margin: -1.4rem 0 0;
+            width: calc(100% + 1rem);
+        }
+    }
+
+    .descripcion {
+        color: v.$blanco;
+    }
+
+}
+
+.planes-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include m.tablet {
+        margin-top: 10rem;
+        flex-direction: row;
+    }
+
+    
+
+    .negocio {
+        background-image: url(../img/icono_negocio.svg);
+        background-color: v.$primario;
+        order: -1;
+
+        @include m.tablet {
+            margin: -5rem 0;
+            border-radius: 2rem;
+            order: unset;
+            background-position: 50% calc(2rem + 5rem);
+            padding-top: calc(16rem + 5rem);
+            z-index: 1;
+        }
+
+        .boton {
+            border: 2px solid v.$blanco;
+        }
+    }
+
+    .inicio {
+        background-image: url(../img/icono_inicio.svg);
+    }
+
+    .pro {
+        background-image: url(../img/icono_pro.svg);
+    }
+}
+
+.plan {
+    background-repeat: no-repeat;
+    background-position: 50% 2rem;
+    background-size: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16rem 4rem 4rem 4rem;
+    background-color: v.$blanco;
+
+    @include m.tablet {
+        transition-property: transform;
+        transition-duration: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 2rem;
+    }
+
+    .precio {
+        font-weight: 900;
+    }
+}

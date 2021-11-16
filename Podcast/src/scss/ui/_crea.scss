@@ -1,0 +1,33 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.crea-grid {
+    @include m.tablet {
+        @include m.grid(2, 1rem)
+    }
+}
+
+.crea-contenido {
+    color: v.$secundario;
+
+    h2 {
+        margin: 3rem 0;
+        font-size: 3.6rem;
+        display: inline-block;
+        font-weight: 900;
+
+        @include m.tablet {
+            margin: 0 0 3rem 0;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1rem;
+            margin: -1.4rem 0 0;
+            width: calc(100% + 1rem);
+            background-color: v.$primario;
+        }
+    }
+
+}

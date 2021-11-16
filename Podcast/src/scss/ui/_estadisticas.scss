@@ -1,0 +1,26 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.estadisticas-grid {
+    
+    h2 {
+        color: v.$secundario;
+        font-size: 3.6rem;
+        font-weight: 900;
+        display: inline-block;
+        margin-bottom: 2rem;
+            
+        &:after {
+            content: "";
+            height: 1rem;
+            background-color: v.$primario;
+            display: block;
+            width: calc(100% + 1rem);
+            margin: -1.4rem 0 0;
+        }
+    }
+    
+    p {
+        margin: 2rem 0;
+    }
+}

@@ -1,0 +1,31 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.site-header {
+    background-image: linear-gradient(rgba(57, 70, 89, .7), rgba(57, 70, 89, 0.7)), url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: v.$separacion 0;
+    
+    .logo {
+        max-width: 20rem;
+    }
+}
+
+.contenido-header {
+    padding: 10rem 0;
+
+    @include m.tablet {
+        max-width: 35%; 
+        
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        color: v.$blanco;
+        font-weight: 900;
+        max-width: 100%;
+    }
+  
+}
