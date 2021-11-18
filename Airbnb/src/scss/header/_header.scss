@@ -1,0 +1,33 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.header {
+    background-image: url(../../../build/img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block: 3rem 20rem;
+}
+
+.barra {
+    display: none;
+
+    @include m.tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__viaje {
+        color: v.$blanco;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 4rem;
+    }
+
+    &__link {
+        color: v.$blanco;
+    }
+}

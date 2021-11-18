@@ -1,0 +1,17 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.experiencia {
+
+    scroll-snap-align: center;
+
+    &__imagen {
+        border-radius: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    &__titulo {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+}

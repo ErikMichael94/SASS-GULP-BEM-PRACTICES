@@ -1,0 +1,8 @@
+@use 'mixins'as m;
+
+.section {
+    margin-block: 3rem;
+    @include m.tablet { 
+        margin-block: 6rem
+    }
+}

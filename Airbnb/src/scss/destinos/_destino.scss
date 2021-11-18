@@ -1,0 +1,19 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.destino {
+    display: flex;
+
+    &__imagen {
+        width: 14rem;
+    }
+
+    &__heading,
+    &__texto {
+        margin: 0;
+    }
+
+    &__heading {
+        font-size: 2.6rem;
+    }
+}

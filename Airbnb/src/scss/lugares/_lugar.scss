@@ -1,0 +1,17 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.lugar {
+    scroll-snap-align: center;
+
+    &__imagen {
+        min-width: 30rem;
+        min-height: 30rem;
+        border-radius: 1rem;
+
+        @include m.tablet {
+            min-width: unset;
+            min-height: unset;
+        }
+    }
+}

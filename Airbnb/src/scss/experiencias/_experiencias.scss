@@ -1,0 +1,16 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.experiencias__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    column-gap: 2rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+        @include m.tablet { 
+            @include m.grid(3,2rem);
+            overflow: unset;
+        }
+
+}

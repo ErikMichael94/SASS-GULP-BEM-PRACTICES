@@ -1,0 +1,18 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.lugares__grid {
+    @include m.grid(4, 4rem);
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    @include m.tablet {
+        @include m.grid (2, 4rem);
+        overflow: unset
+    }
+
+    @include m.desktop {
+        display: flex;
+        gap: 2rem;
+    }
+}

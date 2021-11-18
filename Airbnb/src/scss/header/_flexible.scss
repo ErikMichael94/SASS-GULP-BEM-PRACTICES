@@ -1,0 +1,25 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+.flexible {
+    text-align: center;
+
+    @include m.tablet {
+        margin-top: 30rem;
+    }
+
+    &__boton {
+        padding: 2rem 4rem;
+        border-radius: 3rem;
+        display: block;
+        background-color: v.$blanco;
+        color: #e8505b;
+        font-size: 2rem;
+        font-weight: 900;
+
+        @include m.tablet {
+            display: inline-block;
+        }
+    }
+
+}
