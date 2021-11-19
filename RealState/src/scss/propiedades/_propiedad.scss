@@ -1,0 +1,46 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.propiedad {
+    background-color: v.$blanco;
+    margin-block: 2 rem;
+
+    &__imagen {
+        position: relative;
+        aspect-ratio: 10/6;
+
+    }
+
+    @for $i from 1 through 6 {
+        $imagen: '../img/propiedad_'+ $i + '.jpg';
+
+        &:nth-child(#{$i}) &__imagen {
+            background-image: linear-gradient(to bottom, transparentize(v.$negro, 1%) 0%, transparentize(v.$negro, .3%) 100%), url($imagen);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__nombre {
+        color: v.$blanco;
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        margin: 0;
+        font-size: 2.4rem;
+    }
+
+    &__contenido {
+        padding: 2rem;
+    }
+
+    &__precio {
+        font-size: 3rem;
+        margin: 0
+    }
+
+    &__boton {
+        @include m.boton(v.$primario, v.$blanco);
+        text-transform: uppercase;
+    }
+}

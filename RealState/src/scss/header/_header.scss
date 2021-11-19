@@ -1,0 +1,76 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+
+.header {
+    background-image: linear-gradient(to right, transparentize(v.$primario, .2) 0%, transparentize(v.$primario, .2) 100%), url(../img/header_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @include m.tablet {
+        padding-bottom: 20rem;
+    }
+
+    &__imagen {
+        max-width: 35rem;
+        display: none;
+        position: absolute;
+        
+        @include m.tablet { 
+            border-radius: 2rem 0 0 5rem;
+            display:unset;
+            bottom: -5rem;
+            right: 0;
+        }
+
+        @include m.XL { 
+            max-width: 60rem;
+        }
+    }
+
+    &__barra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: 3rem;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between
+        }
+    }
+
+    &__logo {
+        width: 25rem;
+    }
+
+    &__contenido {
+        text-align: center;
+
+        @include m.tablet {
+            max-width: 50rem;
+            text-align: unset;
+        }
+    }
+
+    &__heading {
+        color: v.$blanco;
+        padding-bottom: 5rem;
+
+        @include m.tablet {
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__texto {
+        color: v.$blanco;
+        display: none;
+
+        @include m.tablet {
+            display: unset;
+        }
+    }
+}
