@@ -1,0 +1,21 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.imagen {
+    aspect-ratio: 10/5;
+    background-image: url(../../../build/img/slide_02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bienvenido {
+
+    &__texto {
+        text-align: center;
+        margin-inline: auto;
+        max-width: 50%;
+        font-size: 2.2rem;
+        line-height: 1.7;
+        color: v.$gris;
+    }
+}

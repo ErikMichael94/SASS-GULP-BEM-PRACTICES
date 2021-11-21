@@ -1,0 +1,28 @@
+@use 'variables'as v;
+@use 'mixins'as m;
+
+.headings {
+    color: v.$primario;
+    font-family: Italianno, sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3.4rem;
+
+    span {
+        display: block;
+        font-family: v.$fuente_principal;
+        text-transform: uppercase;
+        color: v.$negro;
+        margin-top: -1.5rem;
+    }
+}
+
+.section {
+
+    margin-block: 3rem;
+
+    @include m.tablet { 
+        
+    margin-block: 5rem; 
+    }
+}

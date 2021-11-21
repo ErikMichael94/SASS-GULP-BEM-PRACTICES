@@ -1,0 +1,27 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.tabla {
+    border: 0.5rem solid v.$primario;
+    color: v.$blanco;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+
+    &__thead {
+        background-color: v.$primario;
+
+        th {
+            padding: 2rem;
+        }
+    }
+
+    &__tbody .tabla__tr:hover {
+        background-color: darken(v.$secundario, 10%);
+    }
+
+    &__td {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+}

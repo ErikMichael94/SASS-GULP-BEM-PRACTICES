@@ -1,0 +1,12 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.cards {
+    margin-inline: auto;
+
+    &__grid {
+        @include m.tablet {
+            @include m.grid(3, 3rem)
+        }
+    }
+}

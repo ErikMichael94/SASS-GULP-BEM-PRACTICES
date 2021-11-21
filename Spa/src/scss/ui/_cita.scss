@@ -1,0 +1,46 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.cita {
+    background-attachment: fixed;
+    background-image: url(../img/bg_citas.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5rem 0;
+    text-align: center;
+
+    @include m.tablet {
+        background-position: center top;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        color: v.$blanco;
+        font-size: 6rem;
+        font-weight: 400;
+    }
+
+    &__texto {
+        color: v.$blanco;
+        line-height: 2;
+
+        @include m.tablet {
+            max-width: 80%;
+            margin-inline: auto;
+        }
+
+        @include m.desktop { 
+            max-width: 50%;
+        }
+    }
+
+    &__boton {
+        @include m.boton (v.$secundario, v.$blanco);
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 2rem 10rem;
+        margin-top: 2rem;
+        font-size: 2.2rem;
+    }
+}
