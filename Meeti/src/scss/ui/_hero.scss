@@ -1,0 +1,28 @@
+@use 'base/variables' as v; 
+@use 'base/mixins' as m;
+
+.hero {
+    background-image: url(../../../build/img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__header {
+        padding: 2rem;
+        color: v.$blanco;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: Staatliches, cursive;
+        margin-bottom: 1rem;
+        @include m.tablet { 
+            max-width: 60%;
+        }
+     }
+
+    &__boton {
+        @include m.boton(#ff8015, v.$blanco);
+    }
+}

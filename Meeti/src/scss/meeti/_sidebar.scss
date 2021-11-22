@@ -1,0 +1,28 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.sidebar {
+    margin-bottom: 5rem;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__contenido {
+        background-color: v.$secundario;
+        padding-block: 5rem;
+        text-align: center;
+    }
+
+    &__heading {
+        color: v.$blanco;
+    }
+
+    &__texto {
+        color: v.$blanco;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

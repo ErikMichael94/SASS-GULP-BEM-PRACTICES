@@ -1,0 +1,29 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    @include m.tablet {
+        flex-direction: row;
+    }
+
+    &__link {
+        @include m.tablet {
+            line-height: 4;
+        }
+
+        &--crear {
+            color: v.$primario;
+            font-weight: 700;
+
+            @include m.tablet {
+                padding-right: 3rem;
+                border-right: 3px solid v.$gris;
+            }
+        }
+    }
+}

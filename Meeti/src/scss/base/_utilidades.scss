@@ -1,0 +1,17 @@
+@use 'variables' as v; 
+@use 'mixins' as m;
+
+.section {
+    margin-block: 3rem;
+
+    @include m.tablet { 
+        margin-block: 5rem;
+    }
+}
+
+.headings {
+    font-family: Staatliches,cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,49 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.evento {
+    border: 1px solid v.$grisClaro;
+    margin-block: 2rem;
+
+    &__contenido {
+        padding: 2rem;
+    }    
+
+    &__img {
+        width: 100%; 
+    }
+
+    &__fecha {
+        font-size: 1.4rem;
+    }
+
+    &__nombre {
+        color: v.$gris2;
+    }
+}
+
+.autor {
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+
+    &__contenido {
+        font-size: 1.6rem;
+    }
+
+    &__img {
+        width: 10rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__organizado {
+        font-weight: 700;
+    }
+
+    &__nombre {
+        font-weight: 400;
+    }
+}

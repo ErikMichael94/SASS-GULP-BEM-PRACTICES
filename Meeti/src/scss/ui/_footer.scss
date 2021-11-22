@@ -1,0 +1,19 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 2rem;
+
+    @include m.tablet {
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .nav__link {
+            line-height: 2;
+        }
+    }
+}

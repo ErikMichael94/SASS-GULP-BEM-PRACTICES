@@ -1,0 +1,21 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include m.tablet {
+        @include m.grid(4, 3rem)
+    }
+
+    &__field {
+        border: 1px solid #c7c3c8;
+        padding: 1rem;
+    }
+
+    &__submit {
+        @include m.boton(v.$primario, v.$blanco)
+    }
+}
