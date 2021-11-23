@@ -1,0 +1,15 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.bloques {
+
+    &__grid {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+
+        @include m.tablet {
+            grid-template-rows: unset;
+            @include m.grid(2, 0rem)
+        }
+    }
+}

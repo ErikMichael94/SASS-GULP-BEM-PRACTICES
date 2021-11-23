@@ -1,0 +1,25 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.nosotros {
+
+    &__grid {
+        @include m.tablet {
+            @include m.grid(3, 3rem)
+        }
+    }
+
+    &__heading {
+        @include m.heading;
+        text-transform: unset;
+    }
+
+    &__bloque {
+        text-align: center;
+    }
+
+    &__img {
+        margin-bottom: 2rem;
+        margin-inline: auto;
+    }
+}

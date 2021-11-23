@@ -1,0 +1,12 @@
+@use 'variables' as v; 
+@use 'mixins' as m;
+
+.section {
+
+    margin-block: 5rem;
+
+    @include m.tablet { 
+        margin-block: 8rem
+    }
+}
+

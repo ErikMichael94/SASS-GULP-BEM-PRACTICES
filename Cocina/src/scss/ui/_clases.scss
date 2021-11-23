@@ -1,0 +1,22 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.clases {
+    background-color: v.$grisClaro;
+    padding-block: 5rem;
+
+    &__heading {
+        @include m.heading;
+    }
+
+    &__grid {
+
+        @include m.tablet {
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(3, 2rem);
+        }
+    }
+}
